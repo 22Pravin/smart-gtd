@@ -21,7 +21,6 @@ Furthermore, while AI writes code instantly, developers suffer from hidden cogni
 The framework operates via a deterministic, stateful **Directed Acyclic Graph (DAG)**, replacing conversational agent loops with strict mathematical auditing.
 
 ![SMART-GTD Architecture Flow](architecture_flow.png)
-*(Note: Ensure `architecture_flow.png` is placed in the root directory of this repository)*
 
 ### The Tri-Agent Pipeline:
 1. **Phase 1: Contextual Orchestrator (Gemini 2.5 Flash)**
@@ -67,3 +66,55 @@ Evaluated against a cohort of 20 software developers on a native Windows host ma
 ```bash
 git clone [https://github.com/yourusername/SMART-GTD.git](https://github.com/yourusername/SMART-GTD.git)
 cd SMART-GTD
+```
+###2. Set Up Virtual Environment
+```bash
+python -m venv .venv
+source .venv/Scripts/activate  # Windows
+# or
+source .venv/bin/activate      # Linux/Mac
+```
+
+3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+4. Configure API Keys
+Create a .env file in the root directory and add your API keys
+
+---
+
+##💻 Usage
+Run the Contextual Orchestrator via the CLI, providing a task prompt and a difficulty level (easy, medium, hard).
+
+```bash
+python main.py --task "Write a 0/1 Knapsack optimization algorithm" --diff "medium"
+```
+Pipeline Execution:
+
+The framework will scan your directory.
+
+The LangGraph loop will begin generating and executing the code in the background.
+
+Once the code passes the energy and complexity thresholds, the final UI Dashboard and optimized code will be printed to your terminal.
+---
+
+##📁 Repository Structure
+
+SMART-GTD/
+├── main.py                     # Entry point & Contextual Orchestrator
+├── green_auditor_graph.py      # LangGraph Actor-Critic State Machine
+├── telemetry_engine.py         # Deterministic CodeCarbon & Radon Sandbox
+├── developer_feedback_agent.py # UI Dashboard Translation Layer
+├── requirements.txt            # Python dependencies
+├── .env.example                # Example environment variables
+└── README.md                   # Project documentation
+---
+
+##Future Work
+Integration of localized, highly quantized Small Language Models (SLMs) to completely decentralize the pipeline and reduce cloud inference energy.
+
+CI/CD pipeline integration to automatically generate "Carbon Labels" for GitHub Pull Requests.
+
+Expanding the execution sandbox to support compiled languages (C++, Java).
