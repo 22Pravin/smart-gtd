@@ -2,8 +2,7 @@
 
 **A Multi-Agent Framework for Mitigating Energy-Induced Technical Debt through Developer Productivity and Usability Metrics**
 
-> **Master's Thesis Project** > **Authors:** Pravinkumar Gohil & Keval Vashi  
-> **Institution:** Dhirubhai Ambani University  
+> **Author:** Pravinkumar Gohil 
 
 ---
 
