@@ -75,12 +75,12 @@ source .venv/Scripts/activate  # Windows
 source .venv/bin/activate      # Linux/Mac
 ```
 
-3. Install Dependencies
+### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Configure API Keys
+### 4. Configure API Keys
 Create a .env file in the root directory and add your API keys
 
 ---
@@ -91,6 +91,7 @@ Run the Contextual Orchestrator via the CLI, providing a task prompt and a diffi
 ```bash
 python main.py --task "Write a 0/1 Knapsack optimization algorithm" --diff "medium"
 ```
+
 Pipeline Execution:
 
 The framework will scan your directory.
@@ -98,6 +99,7 @@ The framework will scan your directory.
 The LangGraph loop will begin generating and executing the code in the background.
 
 Once the code passes the energy and complexity thresholds, the final UI Dashboard and optimized code will be printed to your terminal.
+
 ---
 
 ## Future Work
