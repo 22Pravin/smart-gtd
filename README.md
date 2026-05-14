@@ -67,7 +67,7 @@ Evaluated against a cohort of 20 software developers on a native Windows host ma
 git clone [https://github.com/yourusername/SMART-GTD.git](https://github.com/yourusername/SMART-GTD.git)
 cd SMART-GTD
 ```
-###2. Set Up Virtual Environment
+### 2. Set Up Virtual Environment
 ```bash
 python -m venv .venv
 source .venv/Scripts/activate  # Windows
@@ -85,7 +85,7 @@ Create a .env file in the root directory and add your API keys
 
 ---
 
-##💻 Usage
+## 💻 Usage
 Run the Contextual Orchestrator via the CLI, providing a task prompt and a difficulty level (easy, medium, hard).
 
 ```bash
@@ -100,19 +100,7 @@ The LangGraph loop will begin generating and executing the code in the backgroun
 Once the code passes the energy and complexity thresholds, the final UI Dashboard and optimized code will be printed to your terminal.
 ---
 
-##📁 Repository Structure
-
-SMART-GTD/
-├── main.py                     # Entry point & Contextual Orchestrator
-├── green_auditor_graph.py      # LangGraph Actor-Critic State Machine
-├── telemetry_engine.py         # Deterministic CodeCarbon & Radon Sandbox
-├── developer_feedback_agent.py # UI Dashboard Translation Layer
-├── requirements.txt            # Python dependencies
-├── .env.example                # Example environment variables
-└── README.md                   # Project documentation
----
-
-##Future Work
+## Future Work
 Integration of localized, highly quantized Small Language Models (SLMs) to completely decentralize the pipeline and reduce cloud inference energy.
 
 CI/CD pipeline integration to automatically generate "Carbon Labels" for GitHub Pull Requests.
